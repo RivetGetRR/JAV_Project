@@ -1,17 +1,11 @@
 package test;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
 import ProjectWork1.GameHandler;
-import ProjectWork1.Question;
-import ProjectWork1.QuestionBankControl;
-import ProjectWork1.Round;
-import ProjectWork1.RoundHandler;
+
 
 public class test {
 
@@ -78,8 +72,7 @@ public class test {
 		        
 		    //System.out.println(c);
 		        
-		    //QuestionBankControl qbc = new QuestionBankControl();
-		    //qbc.addQuestions();
+
 		    GameHandler g = new GameHandler();
 		    g.displayStartMenu();
 	        

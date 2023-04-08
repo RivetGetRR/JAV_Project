@@ -59,7 +59,7 @@ public class GameHandler {
 		//without error and then can be validated against and discarded if invalid instead of getting an error.
 		//This will be done throughout program.
 
-		do {
+		do {//Similar validation system to above
 			try {
 			choice = input.next();
 				switch(choice.toUpperCase()){//
@@ -97,7 +97,7 @@ public class GameHandler {
 		System.out.println("");
 		System.out.println("Enter anything and hit enter to return to Main Menu:");
 		String returns = input.next();
-		//this.displayStartMenu();
+		//just enter anything to return -> no need for validation
 	}
 	
 	public void exitGame() {
