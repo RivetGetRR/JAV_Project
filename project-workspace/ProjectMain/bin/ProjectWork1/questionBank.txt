@@ -1,15 +1,28 @@
-Who wasn't a member of the Beatles?:Justin Timberlake:John Lennon:Paul McCartney:Ringo Star
-What is 15 x 21?:315:210:330:310
-What is the Capital of France:Paris:Notre Dame:Rio:Venice
-What is refered to as 'the powerhouse of the cell'?:Mitochondria:Ectoplasmic Reticulum:DNA:Cell Heart
-Word for 'Remembering the Past Fondly'?:Nostalgia:Meloncholy:Anxiety:Mortis
-Which of the following is not a Mammal?:Finch:Whale:Bear:Bat
-Who was the first woman to fly solo across the Atlantic?:Amelia Earhart:Geraldine Ferraro:Martha Stewart:Sally Ride
-What letter appears first in the Greek alphabet?:Epsilon:Bramble:Rho:Omega
-How many days are in a leap year?:366:28:30:400
-What is someone who specifically collects coins called?:Numismatist:Entomologist:Kleptomaniac:Coiniomist
-Which one of the following is not an Ivy League University?:Ontario Tech:Harvard:Princeton:Columbia
-Which U.S. city is home to both the Liberty Bell and Independence Hall?:Philadelphia:Vancouver:Washington D.C:Beijing
-Which Car company is not involved with aircraft manufacture?:Oldsmobile:Mistubishi:Rolls Royce:SAAB
-What gas makes voices sound higher when inhaled?:Helium:Oxygen:Nitrogen:Sulfur Hexafluoride
-Which is not a type of Electric Guitar?Flame Axe:Flying V:Jazzmaster:Explorer
+3:Who wasn't a member of the Beatles?:Justin Timberlake:John Lennon:Paul McCartney:Ringo Star
+1:What is 15 x 21?:315:210:330:310
+1:What is the Capital of France:Paris:Notre Dame:Rio:Venice
+2:What is refered to as 'the powerhouse of the cell'?:Mitochondria:Ectoplasmic Reticulum:DNA:Cell Heart
+3:Word for 'Remembering the Past Fondly'?:Nostalgia:Meloncholy:Anxiety:Mortis
+1:Which of the following is not a Mammal?:Finch:Whale:Bear:Bat
+3:Who was the first woman to fly solo across the Atlantic?:Amelia Earhart:Geraldine Ferraro:Martha Stewart:Sally Ride
+3:What letter appears first in the Greek alphabet?:Epsilon:Bramble:Rho:Omega
+1:How many days are in a leap year?:366:28:30:400
+3:What is someone who specifically collects coins called?:Numismatist:Entomologist:Kleptomaniac:Coiniomist
+2:Which one of the following is not an Ivy League University?:Ontario Tech:Harvard:Princeton:Columbia
+3:Which U.S. city is home to both the Liberty Bell and Independence Hall?:Philadelphia:Vancouver:Washington D.C:Beijing
+3:Which Car company is not involved with aircraft manufacture?:Oldsmobile:Mistubishi:Rolls Royce:SAAB
+1:What gas makes voices sound higher when inhaled?:Helium:Oxygen:Nitrogen:Sulfur Hexafluoride
+2:Which is not a type of Electric Guitar?:Flame Axe:Flying V:Jazzmaster:Explorer
+3:What is the name of the famous speech given by Martin Luther King Jr. in 1963?:I Have a Dream:The Gettysburg Address:The Emancipation Proclamation:The Declaration of Independence
+2:Who is the author of the "Harry Potter" book series?:J.K. Rowling:J.R.R. Tolkien:Stephenie Meyer:Suzanne Collins
+1:What is the name of the world's largest ocean?:Pacific Ocean:Atlantic Ocean:Indian Ocean:Arctic Ocean
+3:What is the name of the character played by Tom Hanks in the movie "Forrest Gump"?:Forrest Gump:Lieutenant Dan:Bubba:Jenny
+3:What is the name of the first man to walk on the moon?:Neil Armstrong:Buzz Aldrin:Michael Collins:Yuri Gagarin
+2:Which animal is known as the "ship of the desert"?:Camel:Capybara:Zebra:Giraffe
+2:What is the capital city of Italy?:Paris:Rome:Madrid:Athens
+2:What is the name of the famous painting by Leonardo da Vinci that is displayed in the Louvre museum in Paris?:The Mona Lisa:Starry Night:The Last Supper:The Persistence of Memory
+1:What is the name of the country where the Great Pyramid of Giza is located?:Egypt:Greece:Italy:Turkey
+1:What is the currency used in the United States?:Dollar:Euro:Yen:Pound
+1:What is the name of a famous structure in India that is one of the Seven Wonders of the World?:Taj Mahal:Eiffel Tower:Angkor Wat:Hyderabad
+2:What is the name of the famous river that runs through Egypt?:Nile River:Amazon River:Yangtze River:Mississippi River
+1:What is the name of the continent where the country of Australia is located?:Australia:Asia:Europe:Africa

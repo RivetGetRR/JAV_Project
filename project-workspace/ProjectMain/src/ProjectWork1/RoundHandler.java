@@ -4,93 +4,84 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 //set to abstract as this class itself would be used, just extended from
 public abstract class RoundHandler {
 	//all protected to allow for inheritance
 	protected final int NUM_OF_ROUNDS = 3;
-	protected int currentRound;
-	protected double score;
-	protected boolean[] lifelineStatus = new boolean[3];
+	protected int roundNumber;
+	protected double currentEarnings; //score
+	protected LifeLineHandler lifelines;
 	protected Scanner enter;
-	protected String choice;
+	protected String playerName;
+	protected ArrayList<String> mainQuestionPool = new ArrayList<String>();
 	
-	public RoundHandler() {
-		//Work on this:-----
-		this.lifelineStatus[0] = true;
-		this.lifelineStatus[1] = true;
-		this.lifelineStatus[2] = true;
-		//:-------------
+	public RoundHandler(String name) throws IOException, FileNotFoundException{
+		this.lifelines = new LifeLineHandler();
+		this.playerName = name;
+		this.roundNumber = 1;
 		this.enter = new Scanner(System.in);
 		System.out.println("Initialised");
+		//---Dilip------
+		File file = new File("src/ProjectWork1/questionBank.txt");//!CHANGE THIS FOR FINAL FILE!		
+		try(Scanner input = new Scanner(file)){
+			//read the data from the file : read line by line
+			while(input.hasNextLine()) {
+				String line = input.nextLine();
+				this.mainQuestionPool.add(line);
+			}
+		}//--------------
 	}
 	//in future the method must accept the main selected bank of questions: 9 or 15 in the form of either array or arraylist
 	
-	protected void gameOver() {
+	protected void gameOver() {//If the game is lost via Incorrect Answer handle here:
 		System.out.println("Incorrect Answer - Earnings Lost");
-		System.out.println("You Finish the game with $0");
-		System.out.println("");
+		System.out.println(this.playerName + " Finishes the game with $0");
 	}
 	
-	//backup Question Pool?
-	protected ArrayList<String> initializeQuestionPool(int numberOfQuestions) {
-		ArrayList<String> mainQuestionListm = new ArrayList<String>();
-		
-		
-		mainQuestionListm.add("Which of the following is not a Mammal?:@_Finch:@_Whale:@_Bear:@_Bat");
-        mainQuestionListm.add("What is 15 x 21?:@_315:@_210:@_330:@_310");
-        mainQuestionListm.add("What is the Capital of France:@_Paris:@_Notre Dame:@_Rio:@_Venice");
-        mainQuestionListm.add("What is refered to as 'the powerhouse of the cell'?:@_Mitochondria:@_Ectoplasmic Reticulum:@_DNA:@_Cell Heart");
-        mainQuestionListm.add("Word for 'Remembering the Past Fondly'?:@_Nostalgia:@_Meloncholy:@_Anxiety:@_Mortis");
-        mainQuestionListm.add("questioncontent6:@_correctanswer6:@_wrongans61:@_wrongans62:@_wrongans63");
-        mainQuestionListm.add("questioncontent7:@_correctanswer7:@_wrongans71:@_wrongans72:@_wrongans73");
-        mainQuestionListm.add("questioncontent8:@_correctanswer8:@_wrongans81:@_wrongans82:@_wrongans83");
-        mainQuestionListm.add("questioncontent9:@_correctanswer9:@_wrongans91:@_wrongans92:@_wrongans93");
-        mainQuestionListm.add("questioncontent10:@_correctanswer10:@_wrongans101:@_wrongans102:@_wrongans103");
-        mainQuestionListm.add("questioncontent11:@_correctanswer11:@_wrongans111:@_wrongans112:@_wrongans113");
-        mainQuestionListm.add("questioncontent12:@_correctanswer12:@_wrongans121:@_wrongans122:@_wrongans123");
-        mainQuestionListm.add("questioncontent13:@_correctanswer13:@_wrongans131:@_wrongans132:@_wrongans133");
-        mainQuestionListm.add("questioncontent14:@_correctanswer14:@_wrongans141:@_wrongans142:@_wrongans143");
-        mainQuestionListm.add("questioncontent15:@_correctanswer15:@_wrongans151:@_wrongans152:@_wrongans153");
-		
-        return mainQuestionListm;
+	protected void handleGameFinalScore() {//If the Game is won
+        switch(String.valueOf(this.currentEarnings)) {
+        	case "0.0": gameOver(); break;
+        	case "1000000.0": System.out.println("Congratualtions!! You, " + this.playerName + ", are A Millionaire! - Earned: $" + this.currentEarnings);
+	        	//shows winnings if final round done correctly
+	        	break;
+        	case "-1": break;
+        	default: if(this.currentEarnings > 0.0 && this.currentEarnings < 1000000.0) {
+        				System.out.println("Congratualtions. You, " + this.playerName + ", Walked Away with: $" + this.currentEarnings);
+		        	}else{
+		        		System.out.println("Additional Error Occured in Deciding Final Round: -> Win by default -> Earned: $500000");
+		        		break;
+		        	}
+        }
 	}
 	
-	//Code from Dilip----------------
-	public static ArrayList<String> loadQuestionPool(int numOfQuestions) throws IOException, FileNotFoundException {
-		ArrayList<String> questions = new ArrayList<>();
-		File file = new File("src/ProjectWork1/questionBank.txt");//!CHANGE THIS FOR FINAL FILE!
-		
-		int counter = 0;
-		try(Scanner input = new Scanner(file)){
-			//read the data from the file in an alternative way: read line by line then token by token
-			while(input.hasNextLine() && counter < numOfQuestions) {
-				String line = input.nextLine();
-				questions.add(line);
-				counter += 1;
-			}
-			return questions;
-		}
+	protected boolean roundCompleted() {
+		String continueChoice = "";
+        if(this.currentEarnings > 0.0 && this.roundNumber < this.NUM_OF_ROUNDS) { //if earnings become 0 at any point that means the player lost the game
+
+        	System.out.println("Round " + this.roundNumber + " Completed");
+        	this.roundNumber += 1;//progress to next round
+        	
+        	do {//display 
+	        	System.out.print("Do you wish to Continue(C) or Walk Away(W) with Current earnings("+ this.currentEarnings +")? ");
+		        continueChoice = this.enter.next();
+		        if(!continueChoice.toUpperCase().equals("C") &&  !continueChoice.toUpperCase().equals("W")) {
+		        	System.out.println("Invalid Input Try Again");
+		        }
+	        //validation to ensure proper choice is made
+        	}while(!continueChoice.toUpperCase().equals("C") &&  !continueChoice.toUpperCase().equals("W"));
+        	
+	        if(continueChoice.toUpperCase().equals("W")) {
+	        	System.out.println("Walked Away"); // Breaks out of loop and ends game as a result
+	        	return true; //continue;
+	        }
+        }else if(this.roundNumber >= this.NUM_OF_ROUNDS) {
+        	this.roundNumber += 1;
+        }
+        System.out.println(":::");
+        return false;
 	}
-	
-	public static ArrayList<String> loadQuestionPool() throws IOException, FileNotFoundException {
-		ArrayList<String> questions = new ArrayList<>();
-		File file = new File("src/ProjectWork1/questionBank.txt");//!CHANGE THIS FOR FINAL FILE!
-		
-		try(Scanner input = new Scanner(file)){
-			//read the data from the file in an alternative way: read line by line then token by token
-			while(input.hasNextLine()) {
-				String line = input.nextLine();
-				questions.add(line);
-			}
-			return questions;
-		}
-	}
-	//---------------------------
-	
 	public abstract void runRounds();
-	
-	
-	
 }

@@ -1,0 +1,46 @@
+1. Players must choose the most correct answer choice of the four (4) possible answer choices provided.
+2. Both Easy difficulty and Hard difficulty options must be played in three distinct rounds.
+3. Once the user incorrectly answers a question they will lose the game and walk away with no money
+4. After the player chooses their answer for any given question, they must confirm that the choice selected is their final answer. If the player doesn't confirm their choice then they can change their answer to another option only once for each question.
+
+************************ Life-line ************************
+Players are allowed 3 lifelines and they can only use each Life Line ONCE
+•	50/50- This lifeline allows the game to eliminate two incorrect answers. 
+•	Ask the Audience- This lifeline allows the player to “ask the audience” for the correct answer. Be creative with regards to how you implement this.
+•	Phone a friend - This lifeline allows the player to “phone to a friend” for the correct answer. Be creative with regards to how you implement this.
+
+************************ Easy Option ************************
+The player will face up to three (3) questions of varying degrees of difficulty in each round.
+The lifelines are only available in all rounds.
+Upon correctly answering all three questions in each round, a player can choose to walk away with the win price or proceed to next round.
+
+Round 1:
+•	Each question has a respective dollar value: Question 1 is $100, Question 2 is $500 and Question 3 is $1,000.
+•	If a player chooses to walks away after correctly answering all the questions in this round they will “walk away” with $1,000.00.
+
+Round 2
+•	Each question has a respective dollar value: Question 4 is $8,000, Question 5 is $16,000 and Question 6 is $32,000
+•	If a player chooses to walks away after correctly answering all the questions in this round they will “walk away” with $32,000.
+
+Round 3
+•	Each question has a respective dollar value: Question 7 is $125,000, Question 8 is $500,000 and Question is 9 is $1,000,000
+•	The player cannot walk away at this round however, once they complete this final round, they will win the game and walk away with 1 million dollars.
+
+
+************************ Hard Option ************************
+The lifelines are only available in round 2 and round 3 only.
+The player will face up to five (5) questions of varying degrees of difficulty in each round.
+Upon correctly answering all five questions in each round, a player can choose to walk away with the win price or proceed to next round.
+
+Round 1
+•	Each question has a respective dollar value: Question 1 is $100, Question 2 is $200, Question 3 is $300, Question 4 is 500 and Question 5 is $1,000
+•	If a player chooses to walk away after correctly answering all the questions in this round they will “walk away” with $1,000.00
+
+Round 2
+•	Each question has a respective dollar value: Question 6 is $2,000, Question 7 is $4,000, Question 8 is $8,000, Question 9 is $16,000 and Question 10 is $32,000
+•	If a player chooses to walk away after correctly answering all the questions in this round they will “walk away” with $32,000
+
+Round 3
+•	Each question has a respective dollar value: Question 11 is $64,000, Question 12 is $125,000, Question 13 is $250,000, Question 14 is $500,000 and Question is 15 is $1,000,000.
+•	The player cannot walk away at this round however, once they complete this round, they will win the game and walk away with 1 million dollars.
+
